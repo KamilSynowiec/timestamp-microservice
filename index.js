@@ -36,6 +36,16 @@ app.get("/api/:date", (req,res)=>{
      responseObject["unix"]=new Date(input).getTime();
      responseObject["utc"]=new Date(input).toUTCString();
   }
+  else
+  {
+     /* timestamp */
+     
+     input=parseInt(input);   //converts input String into integer
+
+     responseObject["unix"]=new Date(input).getTime();
+     responseObject["utc"]=new Date(input).toUTCString();
+       
+  }
   
   res.json(responseObject);
 });
