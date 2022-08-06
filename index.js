@@ -25,6 +25,11 @@ app.get("/api/hello", function (req, res) {
 });
 
 
+//returns current time
+app.get("/api", (req,res)=>{
+  res.json({"unix": new Date().getTime(), "utc": new Date().toUTCString()});
+});
+
 let responseObject={};
 
 app.get("/api/:date", (req,res)=>{
