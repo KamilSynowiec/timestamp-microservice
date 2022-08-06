@@ -1,4 +1,6 @@
-# Timestamp Microservice
+# Timestamp Microservice  You can run my code on the replit online IDE to check how it works
+
+https://replit.com/join/ndqvyoagvq-kamilsynowiec
 
 - A request to /api/:date? with a valid date returns a JSON object with a unix key that is a Unix timestamp of the input date in milliseconds.
 
