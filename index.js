@@ -36,7 +36,7 @@ app.get("/api/:date", (req,res)=>{
   var input=req.params.date;
   
   //checking if the input is a date String, not a unix number of miliseconds
-  if(input.includes("-")
+  if(input.includes("-")||input.includes(" "))
   {  
      responseObject["unix"]=new Date(input).getTime();
      responseObject["utc"]=new Date(input).toUTCString();
