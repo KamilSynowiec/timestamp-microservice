@@ -25,6 +25,21 @@ app.get("/api/hello", function (req, res) {
 });
 
 
+let responseObject={};
+
+app.get("/api/:date", (req,res)=>{
+  var input=req.params.date;
+  
+  //checking if the input is a date String, not a unix number of miliseconds
+  if(input.includes("-")
+  {  
+     responseObject["unix"]=new Date(input).getTime();
+  }
+  
+  res.json(responseObject);
+});
+
+
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
