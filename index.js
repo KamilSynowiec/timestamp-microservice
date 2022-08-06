@@ -34,6 +34,7 @@ app.get("/api/:date", (req,res)=>{
   if(input.includes("-")
   {  
      responseObject["unix"]=new Date(input).getTime();
+     responseObject["utc"]=new Date(input).toUTCString();
   }
   
   res.json(responseObject);
